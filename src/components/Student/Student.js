@@ -8,6 +8,7 @@ export default class Student extends Component {
     this.state = {
       studentInfo: {},
     };
+
   }
 
   componentDidMount() {
@@ -20,6 +21,7 @@ export default class Student extends Component {
     });
   }
 
+
   render() {
     return (
       <div className="box">
@@ -29,6 +31,7 @@ export default class Student extends Component {
         </h1>
         <h3>Grade: {this.state.studentInfo.grade}</h3>
         <h3>Email: {this.state.studentInfo.email}</h3>
+        <button onClick={this.props.history.goBack}>Back</button>
       </div>
     );
   }
